@@ -58,12 +58,15 @@
   }
 
   /* --------------------------------------------------------------------------
-     Active nav link on scroll
+     Active nav link on scroll (same-page anchors only)
      -------------------------------------------------------------------------- */
   const sections = [...document.querySelectorAll("main section[id]")];
-  const navLinks = [...document.querySelectorAll(".nav-list a")];
+  const navLinks = [...document.querySelectorAll(".nav-list a")].filter((link) =>
+    (link.getAttribute("href") || "").startsWith("#")
+  );
 
   const setActiveLink = () => {
+    if (!navLinks.length) return;
     const offset = window.scrollY + 120;
     let currentId = "";
 
@@ -143,6 +146,16 @@
   const nameError = document.getElementById("nombre-error");
   const matterError = document.getElementById("materia-error");
 
+  const pageContext = document.body.dataset.service || "";
+
+  if (form && matterSelect) {
+    const defaultArea = form.dataset.defaultArea;
+    if (defaultArea) {
+      const optionExists = [...matterSelect.options].some((opt) => opt.value === defaultArea);
+      if (optionExists) matterSelect.value = defaultArea;
+    }
+  }
+
   const getUrgency = () => {
     const checked = form?.querySelector('input[name="urgencia"]:checked');
     return checked ? checked.value : "Consulta preventiva";
@@ -154,8 +167,15 @@
     const urgency = getUrgency();
     const summary = (summaryInput?.value || "").trim();
 
-    let message =
-      `Hola Ana, soy ${name}.\n` +
+    let message = `Hola Ana, soy ${name}.\n`;
+
+    if (pageContext === "familia") {
+      message += "Te contacto desde la página de Derecho de Familia.\n";
+    } else if (pageContext === "laboral") {
+      message += "Te contacto desde la página de Derecho Laboral.\n";
+    }
+
+    message +=
       `Quisiera una consulta sobre: ${matter}.\n` +
       `Urgencia: ${urgency}.`;
 
@@ -163,7 +183,7 @@
       message += `\nResumen: ${summary}`;
     }
 
-    message += "\n¿Podemos coordinar una reunión?";
+    message += "\n¿Podemos coordinar una reunión en Santiago o online?";
     return message;
   };
 

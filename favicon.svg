@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Ana Navarro Abogada">
+  <rect width="64" height="64" rx="12" fill="#182830"/>
+  <path fill="#C59B27" d="M32 10c-.9 0-1.7.5-2.1 1.2L12.4 41.8a2.2 2.2 0 0 0 1.9 3.3h8.4V55c0 1.5 1.2 2.7 2.7 2.7h13.2c1.5 0 2.7-1.2 2.7-2.7V45.1h8.4a2.2 2.2 0 0 0 1.9-3.3L34.1 11.2A2.3 2.3 0 0 0 32 10zm0 7.4 15.2 27.7H16.8L32 17.4zM24.8 45.1h14.4V55H24.8v-9.9z"/>
+  <rect x="8" y="24" width="11" height="3" rx="1.5" transform="rotate(-28 13.5 25.5)" fill="#C59B27"/>
+  <rect x="45" y="24" width="11" height="3" rx="1.5" transform="rotate(28 50.5 25.5)" fill="#C59B27"/>
+  <circle cx="11.5" cy="33" r="3" fill="#C59B27"/>
+  <circle cx="52.5" cy="33" r="3" fill="#C59B27"/>
+</svg>
