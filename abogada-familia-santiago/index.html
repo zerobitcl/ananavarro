@@ -27,7 +27,10 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,500&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,500&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,500&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap">
+  </noscript>
   <link rel="stylesheet" href="/styles.css">
 
   <script type="application/ld+json">
@@ -173,33 +176,59 @@
 
   <main id="contenido-principal">
     <section class="landing-hero" aria-labelledby="hero-title">
-      <div class="landing-hero-inner reveal">
-        <p class="eyebrow">
-          <span class="eyebrow-dot" aria-hidden="true"></span>
-          Derecho de Familia · Santiago y online Chile
-        </p>
-        <h1 id="hero-title">Abogada de Familia en Santiago</h1>
-        <p class="hero-lead">
-          Cuando tu familia atraviesa un conflicto legal, necesitas claridad y contención,
-          no un laberinto de tecnicismos. Ana Navarro te acompaña en pensión de alimentos,
-          divorcio, cuidado personal, relación directa y regular, y medidas de protección,
-          con atención presencial en Santiago u online en todo Chile.
-        </p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="https://wa.me/56922595879?text=Hola%20Ana%2C%20quisiera%20una%20consulta%20de%20Derecho%20de%20Familia." target="_blank" rel="noopener noreferrer">
-            Hablar por WhatsApp
-          </a>
-          <a class="btn btn-outline" href="#contacto">Agendar pre-consulta</a>
+      <div class="landing-hero-inner">
+        <div class="landing-hero-grid">
+          <div class="hero-animate">
+            <p class="eyebrow">
+              <span class="eyebrow-dot" aria-hidden="true"></span>
+              Derecho de Familia · Santiago y online Chile
+            </p>
+            <h1 id="hero-title">Abogada de Familia en Santiago</h1>
+            <p class="hero-lead">
+              Cuando tu familia atraviesa un conflicto legal, necesitas claridad y contención,
+              no un laberinto de tecnicismos. Ana Navarro te acompaña en pensión de alimentos,
+              divorcio, cuidado personal, relación directa y regular, y medidas de protección,
+              con atención presencial en Santiago u online en todo Chile.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="https://wa.me/56922595879?text=Hola%20Ana%2C%20quisiera%20una%20consulta%20de%20Derecho%20de%20Familia." target="_blank" rel="noopener noreferrer">
+                Hablar por WhatsApp
+              </a>
+              <a class="btn btn-outline" href="#contacto">Agendar pre-consulta</a>
+            </div>
+            <p class="legal-note">
+              Orientación general basada en la normativa chilena vigente. Cada caso es distinto:
+              la estrategia se define tras revisar tu situación concreta. Contenido sujeto a
+              validación profesional antes de decisiones definitivas.
+            </p>
+          </div>
+          <aside class="landing-aside hero-animate" aria-label="Resumen de atención en familia">
+            <p class="landing-aside-label">Resumen de atención</p>
+            <ul class="landing-aside-list">
+              <li>
+                <strong>Modalidad</strong>
+                <span>Presencial en Santiago y online a todo Chile</span>
+              </li>
+              <li>
+                <strong>Dato clave</strong>
+                <span>En varias materias de familia se exige mediación previa (Ley 19.968)</span>
+              </li>
+              <li>
+                <strong>Documentos útiles</strong>
+                <span>Cédula, certificados de nacimiento, ingresos y mediaciones previas</span>
+              </li>
+              <li>
+                <strong>Contacto</strong>
+                <span>Directo con Ana Navarro, sin intermediarios</span>
+              </li>
+            </ul>
+            <a class="btn btn-primary btn-sm" href="#contacto">Agendar ahora</a>
+          </aside>
         </div>
-        <p class="legal-note">
-          Orientación general basada en la normativa chilena vigente. Cada caso es distinto:
-          la estrategia se define tras revisar tu situación concreta. Contenido sujeto a
-          validación profesional antes de decisiones definitivas.
-        </p>
       </div>
     </section>
 
-    <section class="content-block" aria-labelledby="cuando-title">
+    <section class="content-block wide" aria-labelledby="cuando-title">
       <div class="section-inner reveal">
         <p class="section-kicker">Situaciones frecuentes</p>
         <h2 id="cuando-title">¿Cuándo necesitas una abogada de familia en Santiago?</h2>
@@ -219,7 +248,7 @@
       </div>
     </section>
 
-    <section class="content-block" aria-labelledby="servicios-title">
+    <section class="content-block wide" aria-labelledby="servicios-title">
       <div class="section-inner">
         <header class="reveal">
           <p class="section-kicker">Qué resolvemos</p>
@@ -232,7 +261,8 @@
         </header>
 
         <div class="subservice-grid">
-          <article class="subservice-card reveal">
+          <article class="subservice-card reveal" style="--delay:0ms">
+            <span class="subservice-index" aria-hidden="true">01</span>
             <h3>Pensión de alimentos</h3>
             <p>
               Demanda, aumento, rebaja y cobro de pensión. Revisamos ingresos,
@@ -243,7 +273,8 @@
             </p>
           </article>
 
-          <article class="subservice-card reveal">
+          <article class="subservice-card reveal" style="--delay:80ms">
+            <span class="subservice-index" aria-hidden="true">02</span>
             <h3>Divorcio de mutuo acuerdo y unilateral</h3>
             <p>
               Si ambos quieren terminar el matrimonio con acuerdos claros, diseñamos
@@ -253,7 +284,8 @@
             </p>
           </article>
 
-          <article class="subservice-card reveal">
+          <article class="subservice-card reveal" style="--delay:160ms">
+            <span class="subservice-index" aria-hidden="true">03</span>
             <h3>Cuidado personal</h3>
             <p>
               Cuando hay que definir con quién viven los niños, el foco es el interés
@@ -263,7 +295,8 @@
             </p>
           </article>
 
-          <article class="subservice-card reveal">
+          <article class="subservice-card reveal" style="--delay:240ms">
+            <span class="subservice-index" aria-hidden="true">04</span>
             <h3>Relación directa y regular</h3>
             <p>
               Régimen de visitas o convivencia con el padre o madre no cuidador.
@@ -273,7 +306,8 @@
             </p>
           </article>
 
-          <article class="subservice-card reveal">
+          <article class="subservice-card reveal" style="--delay:320ms">
+            <span class="subservice-index" aria-hidden="true">05</span>
             <h3>Medidas de protección (VIF)</h3>
             <p>
               Ante violencia intrafamiliar, la prioridad es tu seguridad y la de

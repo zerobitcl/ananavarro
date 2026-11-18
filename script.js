@@ -280,6 +280,8 @@
 
       if (statusEl && area) {
         statusEl.textContent = `Área preseleccionada: ${area}. Completa tu nombre y envía la consulta.`;
+        statusEl.classList.add("is-highlight");
+        window.setTimeout(() => statusEl.classList.remove("is-highlight"), 3200);
       }
     });
   });
